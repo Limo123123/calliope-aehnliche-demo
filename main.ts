@@ -71,6 +71,8 @@ function Starten () {
     } else if (Zahl == 5) {
         Start = 5
         basic.showNumber(Zahl)
+    } else {
+        Zahl = 0
     }
 }
 input.onButtonPressed(Button.B, function () {
