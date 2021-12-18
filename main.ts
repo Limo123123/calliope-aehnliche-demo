@@ -3,18 +3,15 @@ function _2 () {
         if (input.buttonIsPressed(Button.AB)) {
             Starten()
             break;
-        }
-        basic.showIcon(IconNames.Tortoise)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
+        } else {
+            basic.showIcon(IconNames.Tortoise)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     }
 }
@@ -27,18 +24,15 @@ function _5 () {
         if (input.buttonIsPressed(Button.AB)) {
             Starten()
             break;
-        }
-        basic.showIcon(IconNames.Cow)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
+        } else {
+            basic.showIcon(IconNames.Cow)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     }
 }
@@ -47,18 +41,15 @@ function _3 () {
         if (input.buttonIsPressed(Button.AB)) {
             Starten()
             break;
-        }
-        basic.showIcon(IconNames.Happy)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
+        } else {
+            basic.showIcon(IconNames.Happy)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     }
 }
@@ -91,18 +82,15 @@ function _4 () {
         if (input.buttonIsPressed(Button.AB)) {
             Starten()
             break;
-        }
-        basic.showIcon(IconNames.Duck)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
+        } else {
+            basic.showIcon(IconNames.Duck)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     }
 }
@@ -111,18 +99,15 @@ function _1 () {
         if (input.buttonIsPressed(Button.AB)) {
             Starten()
             break;
-        }
-        basic.showIcon(IconNames.Heart)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
+        } else {
+            basic.showIcon(IconNames.Heart)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
         }
     }
 }
