@@ -116,6 +116,7 @@ function _1 () {
 let Start = 0
 let Zahl = 0
 Zahl = 1
+Starten()
 basic.forever(function () {
     if (input.isGesture(Gesture.Shake) && Start == 1) {
         basic.clearScreen()
