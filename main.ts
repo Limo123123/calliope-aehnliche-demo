@@ -1,59 +1,14 @@
-function _2 () {
-    for (let index = 0; index < 1e+196; index++) {
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
-        } else {
-            basic.showIcon(IconNames.Tortoise)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                `)
-        }
-    }
-}
 input.onButtonPressed(Button.A, function () {
     Starten()
     Zahl += -1
 })
-function _5 () {
-    for (let index = 0; index < 1e+196; index++) {
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
-        } else {
-            basic.showIcon(IconNames.Cow)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                `)
-        }
-    }
-}
-function _3 () {
-    for (let index = 0; index < 1e+196; index++) {
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
-        } else {
-            basic.showIcon(IconNames.Happy)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                `)
-        }
-    }
-}
+input.onButtonPressed(Button.AB, function () {
+    anoderaus = 0
+    basic.pause(100)
+    Starten()
+})
 function Starten () {
+    basic.clearScreen()
     if (Zahl == 0) {
         Zahl = 1
     } else if (Zahl == 1) {
@@ -79,59 +34,74 @@ input.onButtonPressed(Button.B, function () {
     Starten()
     Zahl += 1
 })
-function _4 () {
-    for (let index = 0; index < 1e+196; index++) {
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
-        } else {
-            basic.showIcon(IconNames.Duck)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                `)
-        }
-    }
-}
-function _1 () {
-    for (let index = 0; index < 1e+196; index++) {
-        if (input.buttonIsPressed(Button.AB)) {
-            Starten()
-            break;
-        } else {
-            basic.showIcon(IconNames.Heart)
-            basic.showLeds(`
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                . . . . .
-                `)
-        }
-    }
-}
 let Start = 0
+let anoderaus = 0
 let Zahl = 0
 Zahl = 1
 Starten()
 basic.forever(function () {
+    if (anoderaus == 1) {
+        basic.showIcon(IconNames.Heart)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (anoderaus == 2) {
+        basic.showIcon(IconNames.Tortoise)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (anoderaus == 3) {
+        basic.showIcon(IconNames.Happy)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (anoderaus == 4) {
+        basic.showIcon(IconNames.Duck)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (anoderaus == 5) {
+        basic.showIcon(IconNames.Cow)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
+    }
+})
+basic.forever(function () {
     if (input.isGesture(Gesture.Shake) && Start == 1) {
         basic.clearScreen()
-        _1()
+        anoderaus = 1
     } else if (input.isGesture(Gesture.Shake) && Start == 2) {
         basic.clearScreen()
-        _2()
+        anoderaus = 2
     } else if (input.isGesture(Gesture.Shake) && Start == 3) {
         basic.clearScreen()
-        _3()
+        anoderaus = 3
     } else if (input.isGesture(Gesture.Shake) && Start == 4) {
         basic.clearScreen()
-        _4()
+        anoderaus = 4
     } else if (input.isGesture(Gesture.Shake) && Start == 5) {
         basic.clearScreen()
-        _5()
+        anoderaus = 5
     }
 })
